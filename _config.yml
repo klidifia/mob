@@ -20,7 +20,7 @@
 
 title: MOB
 description: MOB
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/mob" # the subpath of your site, e.g. /blog
 url: "https://www.mobcto.co" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings

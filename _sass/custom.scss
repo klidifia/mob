@@ -1,3 +1,19 @@
+@font-face {
+    font-family: 'Mobbish';
+    src: url('../assets/fonts/CloisterBlack.ttf') format('truetype');;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    background-color: black;
+}
+
 .site-header,
 .site-footer {
     background-color: black;
@@ -20,7 +36,34 @@
         color: white;
     }
 
-    p {
+    h1 {
         color: white;
+        font-family: Mobbish, serif;
+        margin-bottom: 0.25em;
+        text-align: center;
+        font-size: 3em;
+    }
+
+    .ca {
+        position: relative;
+        background-image: url('images/copy.png');
+        background-repeat: no-repeat;
+        background-size: 32px;
+        background-position: calc(100% - 10px) center;
+        cursor: pointer;
+        word-break: break-all;
+        padding: 10px 50px 10px 10px;
+        display: table;
+        color: white;
+        font-family: Mobbish, serif;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+
+        &:hover,
+        &:visited {
+            text-decoration: none;
+        }
     }
 }
