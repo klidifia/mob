@@ -1,0 +1,26 @@
+.site-header,
+.site-footer {
+    background-color: black;
+    border: 0;
+}
+
+.page-content {
+    background-color: black;
+
+    a,
+    a:visited,
+    a:hover,
+    a:active,
+    a:focus {
+        color: white;
+        outline: none;
+    }
+
+    a:hover {
+        color: white;
+    }
+
+    p {
+        color: white;
+    }
+}
