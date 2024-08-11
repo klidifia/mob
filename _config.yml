@@ -23,6 +23,7 @@ description: MOB
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.mob.so" # the base hostname & protocol for your site, e.g. http://example.com
 
+
 # Build settings
 theme: minima
 plugins:
