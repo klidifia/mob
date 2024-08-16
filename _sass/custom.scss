@@ -194,6 +194,18 @@ body {
             background-color: darken(#c7f382, 10%);
         }
     }
+
+    .memes {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
 }
 
 .links {
