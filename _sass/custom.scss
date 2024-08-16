@@ -49,12 +49,19 @@ body {
         color: white;
     }
 
-    h1 {
+    h1, h2 {
         color: white;
         font-family: Mobbish, serif;
-        margin-bottom: 0.25em;
         text-align: center;
+    }
+
+    h1 {
         font-size: 5em;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.5em;
     }
 
     .ca {
