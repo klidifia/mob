@@ -136,6 +136,10 @@ body {
         text-align: center;
         font-size: 5em;
         margin-bottom: 0;
+
+        @media (max-width: 768px) {
+            font-size: 3em;
+        }
     }
 
     .ca {
