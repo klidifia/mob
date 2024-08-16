@@ -3,11 +3,18 @@
     src: url('../assets/fonts/CloisterBlack.ttf') format('truetype');;
 }
 
+@font-face {
+    font-family: 'Mobbish2';
+    src: url('../assets/fonts/mobbish.woff2') format('woff2');;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
-    height: 100vh;
-    display: grid;
-    place-items: center;
+    position: relative;
     font-size: 24px;
     font-weight: bold;
     color: white;
@@ -21,20 +28,94 @@ body {
 }
 
 .wrapper {
-    max-width: -webkit-calc(1000px - (30px * 2));
-    max-width: calc(1000px - 30px * 2);
+    max-width: unset;
 }
 
-@media screen and (max-width: 800px) {
-    .wrapper {
-        max-width: -webkit-calc(1000px - (30px));
-        max-width: calc(1000px - (30px));
+.header {
+    .site-header {
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: auto;
+            padding: 0 2rem;
+            margin-top: 1rem;
+
+            @media (max-width: 768px) {
+                margin-top: 0.75rem;
+                padding: 0 0.75rem;
+            }
+
+            #logo {
+                flex-grow: 0;
+                display: flex;
+                align-items: center;
+
+                img {
+                    transform: translate(0px, 0px) rotate(0deg);
+                    transform-origin: 32px 32px;
+                    width: 64px;
+                    height: 64px;
+                    opacity: 1.0;
+                    object-fit: fill;
+                    clip-path: circle();
+                    margin-right: 1rem;
+                    max-width: 65px;
+
+                    @media (max-width: 768px) {
+                        width: 50px;
+                    }
+                }
+
+                h2 {
+                    margin: 0;
+                    font-family: "Mobbish2", Arial, sans-serif;
+
+                    @media (max-width: 768px) {
+                        font-size: 1.25em;
+                    }
+                }
+            }
+
+            .links {
+                flex-grow: 1;
+                display: flex;
+                justify-content: flex-end;
+                gap: 10px;
+
+                > div {
+                    padding-right: 1.25rem;
+
+                    @media (max-width: 768px) {
+                        padding-right: 0.5rem;
+                    }
+
+                    &:last-child {
+                        padding: 0;
+                    }
+                }
+
+                > div {
+                    width: 45px;
+
+                    @media (max-width: 768px) {
+                        width: 30px;
+                    }
+                }
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
-
 .page-content {
     background-color: black;
+    display: grid;
+    place-items: center;
 
     a,
     a:visited,
@@ -49,19 +130,12 @@ body {
         color: white;
     }
 
-    h1, h2 {
+    h1 {
         color: white;
         font-family: Mobbish, serif;
         text-align: center;
-    }
-
-    h1 {
         font-size: 5em;
         margin-bottom: 0;
-    }
-
-    h2 {
-        font-size: 1.5em;
     }
 
     .ca {
@@ -78,7 +152,7 @@ body {
         text-decoration: none;
         border: none;
         border-radius: 5px;
-        margin-bottom: 2rem;
+        margin: 0 auto 2rem;
 
         @media (max-width: 768px) {
             background-size: 24px;
@@ -95,9 +169,30 @@ body {
         margin-top: 1.5em;
         font-size: 0.8em;
     }
+
+    .links a {
+        padding: 10px 20px;
+        display: table;
+        background-color: #c7f382;
+        color: black;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+        font-family: Mobbish2, SansSerif, serif;
+        font-size: 1.2em;
+
+        &:visited {
+            color: black;
+        }
+
+        &:hover {
+            background-color: darken(#c7f382, 10%);
+        }
+    }
 }
 
-#links {
+.links {
     flex-grow: 1;
     display: flex;
     justify-content: center;
