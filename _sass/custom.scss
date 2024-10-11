@@ -206,6 +206,14 @@ body {
             height: auto;
             object-fit: cover;
         }
+
+        .slick-slide {
+            margin: 0 0.75rem;
+
+            @media (max-width: 768px) {
+                margin: 0;
+            }
+        }
     }
 
     .info {
